@@ -75,7 +75,7 @@ function readMode() {
         txt.codemirror.display.input &&
         typeof txt.codemirror.display.input.blur === 'function') {
       txt.codemirror.display.input.blur();
-      txt.codemirror.setOptions("direction", "rtl");
+      txt.codemirror.setOption("direction", "rtl");
     }
     txt.togglePreview();
   }
