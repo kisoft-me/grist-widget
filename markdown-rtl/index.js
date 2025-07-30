@@ -75,6 +75,7 @@ function readMode() {
         txt.codemirror.display.input &&
         typeof txt.codemirror.display.input.blur === 'function') {
       txt.codemirror.display.input.blur();
+      txt.codemirror.setOptions("direction", "rtl");
     }
     txt.togglePreview();
   }
@@ -170,7 +171,7 @@ ready(() => {
         status: false,
         minHeight: '0px',
         toolbar: editable ? toolbar : false,
-	direction: 'rtl'
+	      direction: 'rtl'
       });
       if (editable) {
         dom.update(document.querySelector(".edit-action"), dom.hide(isEditMode));
